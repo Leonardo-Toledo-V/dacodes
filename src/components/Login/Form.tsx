@@ -8,13 +8,13 @@ export default function Form() {
                 <h2 className="text-base font-poppins">¡Bienvenido!</h2>
             </div>
             <div>
-                <div className="flex flex-col max-w-lg mt-16">
+                <div className="flex flex-col max-w-lg mt-12">
                     <label className="mb-3 font-poppins" htmlFor="email">Correo electrónico de DaCodes</label>
-                    <input className="bg-[#5141EA] rounded-xl py-2" type="text" id="email" />
+                    <input className="bg-[#5141EA] rounded-xl py-2 px-4" type="text" id="email" />
                 </div>
                 <div className="flex flex-col max-w-lg mt-6">
                     <label className="mb-3 font-poppins" htmlFor="pass">Contraseña</label>
-                    <input className="bg-[#5141EA] rounded-xl py-2" type="text" id="pass" />
+                    <input className="bg-[#5141EA] rounded-xl py-2 px-4" type="password" id="pass" />
                 </div>
                 <div className="flex justify-start items-center space-x-3 ml-4 max-w-lg mt-6">
                     <input className="bg-[#D9D9D980] checked:before:bg-black rounded-xl" type="checkbox" id="pass" />
