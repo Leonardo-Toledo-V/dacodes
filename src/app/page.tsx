@@ -1,13 +1,12 @@
-import Footer from "@/components/Footer";
-import Form from "@/components/Login/Form";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
     <>
       <Navbar />
-      <Form/>
-      <Footer/>
+      
+      <Footer />
     </>
   )
 }
