@@ -1,5 +1,8 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from '@/libs/axios';
+import { useRouter } from 'next/navigation';
+import Cookies from "js-cookie"
 
 interface FormData {
     email: string;
@@ -8,22 +11,30 @@ interface FormData {
 }
 
 export default function Form() {
-
     const [data, setData] = useState<FormData>({
         email: "",
         password: "",
         terms: false
     });
 
+    const [token, setToken] = useState<string>();
+
+    useEffect(() => {
+      if (token !== undefined) {
+        Cookies.set('dacodes-auth', token);
+      }
+    }, [token]);
+
+
     const [disabled, setDisabled] = useState<boolean>(true);
+
+    const router = useRouter();
 
     useEffect(() => {
         const isEmailValid = data.email.includes("@");
         const isPasswordValid = data.password.length >= 8;
         const isTermsAccepted = data.terms;
-
         const isDisabled = !(isEmailValid && isPasswordValid && isTermsAccepted);
-        console.log(isDisabled);
         setDisabled(isDisabled);
     }, [data.email, data.password, data.terms]);
 
@@ -37,13 +48,27 @@ export default function Form() {
         }));
     };
 
+    const handleSubmit = (event: React.FormEvent<HTMLFormElement>)=>{
+        event.preventDefault();
+        axios('/authentication').then(function(){
+            const bearerToken = process.env.NEXT_PUBLIC_API_KEY;
+            if(bearerToken !== undefined) {
+                const key = bearerToken.split(' ')[1];
+                setToken(key);
+                router.push("/")
+            }
+        }).catch(function(err){
+            console.log(err)
+        });
+    }
+
     return (
         <main className="flex flex-col text-white mx-6 lg:mx-28 mt-20">
             <div>
                 <h2 className="font-poppinsBold text-2xl">Login</h2>
                 <h2 className="text-base font-poppins">¡Bienvenido!</h2>
             </div>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <div className="flex flex-col max-w-lg mt-12">
                     <label className="mb-3 font-poppins" htmlFor="email">Correo electrónico de DaCodes</label>
                     <input
