@@ -1,9 +1,15 @@
+"use client"
 import Image from 'next/image'
 import React from 'react'
 import { PiUserCircleLight } from "react-icons/pi"
 import Link from 'next/link'
+import Cookies from 'js-cookie'
 
 export default function Navbar() {
+    const handleLogOut = () => {
+        Cookies.remove('dacodes-auth')
+    }
+
     return (
         <nav>
             <ul className='flex justify-between items-center bg-[#5141EA] w-full h-14'>
@@ -17,6 +23,7 @@ export default function Navbar() {
                 </li>
                 <li className='text-white mx-12 hover:text-gray-300 duration-300 cursor-pointer'>
                     <Link
+                    onClick={handleLogOut}
                     href='/login'
                     >
                         <PiUserCircleLight
