@@ -8,7 +8,7 @@ export default function Dock() {
     const [disabled, setDisabled]= useState<boolean>(false);
 
     return (
-        <div className='flex flex-col md:flex-row justify-start md:space-x-8 space-y-4 md:space-y-0 mx-4 lg:mx-16 mt-16 mb-8'>
+        <div className='flex flex-col md:flex-row justify-start md:space-x-8 space-y-4 md:space-y-0 mt-16 mb-8'>
             <div 
             className={
                 `py-2 px-8 rounded-2xl text-white duration-300 text-lg ${!disabled

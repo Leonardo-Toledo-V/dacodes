@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function Footer() {
     return (
-        <div className='bg-[url("/gradient.png")] w-full h-[600px] mt-32 py-10 lg:px-12 bg-cover'>
+        <div className='bg-[url("/gradient.png")] w-full h-[650px] mt-32 py-10 lg:px-12 bg-cover'>
             <div>
                 <div className='mx-12 mt-10 lg:mt-24'>
                     <h3 className='text-white text-lg font-poppinsBold'>We are coding the world of tomorrow</h3>
