@@ -4,7 +4,7 @@ import { poppins, PoppinsBold } from './fonts'
 
 
 export const metadata: Metadata = {
-  title: 'Dacodes',
+  title: 'Dacodes - Movies',
   description: 'Movies app by RustyDev for DaCodes',
 }
 
