@@ -28,7 +28,7 @@ Consiste en una aplicación la cuál demuestra todos los conocimientos adquirido
 | password | (Mayor a 8 caracteres)    |
 | terms    | (Darle a aceptar)         |
 
-> **Nota**
+> [!NOTE]  
 > Los valores a ingresar, no importan mientras que se cumplan con los requisitos el botón de Crear Cuenta se habilitará
 
 
