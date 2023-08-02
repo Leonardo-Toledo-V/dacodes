@@ -50,11 +50,10 @@ export default function Form() {
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>)=>{
         event.preventDefault();
-        axios('/authentication').then(function(){
-            const bearerToken = process.env.NEXT_PUBLIC_API_KEY;
-            if(bearerToken !== undefined) {
-                const key = bearerToken.split(' ')[1];
-                setToken(key);
+        axios('/authentication/guest_session/new').then(function(response){
+            const session_id = response.data.guest_session_id
+            if(session_id !== undefined) {
+                setToken(session_id);
                 router.push("/")
             }
         }).catch(function(err){
