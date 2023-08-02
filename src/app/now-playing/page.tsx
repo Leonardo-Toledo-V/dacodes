@@ -21,12 +21,15 @@ interface Movie {
 
 export default function NowPlayingPage() {
   const [movies, setMovies] = useState<Movie[]>([]);
-  const { page, setLastPage} = useContext(PageContext);
+  const { page, setLastPage, setPage } = useContext(PageContext);
+  const [firstRequest, setFirstRequest] = useState<boolean>(true);
 
+  useEffect(() => {setPage(1)},[])
+  
   const options = {
-    params: {language: 'es-MX', page: `${page}`}
+    params: {language: 'es-MX', page: firstRequest ? "1": `${page}`}
   };
-
+  
   useEffect(() => {
     axios("/movie/now_playing", options).then(function (response) {
       setLastPage(response.data.total_pages);
@@ -42,6 +45,7 @@ export default function NowPlayingPage() {
     }).catch(function (err) {
       console.error(err);
     });
+    setFirstRequest(false)
   }, [page]);
 
   if (movies.length === 0) {

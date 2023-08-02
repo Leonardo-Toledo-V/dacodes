@@ -1,6 +1,6 @@
 "use client"
-import { PageContext } from '@/hooks/PageProvider';
 import React, { useContext } from 'react'
+import { PageContext } from '@/hooks/PageProvider';
 
 export default function Pagination() {
     const { page, setPage, lastPage } = useContext(PageContext);
@@ -25,7 +25,7 @@ export default function Pagination() {
                 aria-label="Pagination">
                 <a
                     onClick={handlePrevious}
-                    className={`py-4 px-6 text-xl font-semibold rounded-full ${page === 1 ? "bg-[#211a5d] cursor-not-allowed" : "bg-[#5141EA] cursor-pointer"}`}>
+                    className={`py-4 px-6 text-xl font-semibold rounded-full ${page === 1 ? "bg-[#2924aa] cursor-not-allowed" : "bg-[#5141EA] cursor-pointer"}`}>
                     {"<"}
                 </a>
                 <p
@@ -34,7 +34,7 @@ export default function Pagination() {
                 </p>
                 <a
                     onClick={handleNext}
-                    className={`py-4 px-6 text-xl font-semibold rounded-full ${page === lastPage ? "bg-[#211a5d] cursor-not-allowed" : "bg-[#5141EA] cursor-pointer"}`}>
+                    className={`py-4 px-6 text-xl font-semibold rounded-full ${page === lastPage ? "bg-[#2924aa] cursor-not-allowed" : "bg-[#5141EA] cursor-pointer"}`}>
                     {">"}
                 </a>
             </div>
