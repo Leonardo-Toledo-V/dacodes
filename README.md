@@ -29,10 +29,10 @@ Consiste en una aplicación la cuál demuestra todos los conocimientos adquirido
 | terms    | (Darle a aceptar)         |
 
 > [!NOTE]  
-> Los valores a ingresar, no importan mientras que se cumplan con los requisitos el botón de Crear Cuenta se habilitará
+> Los valores a ingresar no importan, mientras que se cumplan con los requisitos el botón de Crear Cuenta se habilitará
 
 
-- Una vez hayamos entrado podremos visualizar la página principal de películas que nos muestra 4 apartados
+- Una vez hayamos entrado podremos visualizar la página principal de películas que nos muestra 4 apartados:
 
   - Now Playing
   - Popular
