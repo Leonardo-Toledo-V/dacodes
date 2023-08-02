@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { poppins, PoppinsBold } from './fonts'
+import { PageContextProvider } from '@/hooks/PageProvider'
 
 
 export const metadata: Metadata = {
@@ -15,7 +16,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es">
-      <body className={`${poppins.variable} ${PoppinsBold.variable}`}>{children}</body>
+      <PageContextProvider>
+        <body className={`${poppins.variable} ${PoppinsBold.variable}`}>{children}</body>
+      </PageContextProvider>
     </html>
   )
 }

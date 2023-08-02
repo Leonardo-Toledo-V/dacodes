@@ -1,10 +1,12 @@
 "use client"
+import { useContext, useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Dock from "@/components/Landing/Dock";
-import { useEffect, useState } from "react";
-import axios from "@/libs/axios";
 import Movies from "@/components/Landing/Movies/Movies";
+import Pagination from "@/components/Landing/Pagination";
+import axios from "@/libs/axios";
+import { PageContext } from "@/hooks/PageProvider";
 import {AiOutlineLoading3Quarters} from "react-icons/ai"
 
 interface Movie {
@@ -19,9 +21,15 @@ interface Movie {
 
 export default function Home() {
   const [movies, setMovies] = useState<Movie[]>([]);
+  const { page, setLastPage} = useContext(PageContext);
+
+  const options = {
+    params: {language: 'es-MX', page: `${page}`}
+  };
 
   useEffect(() => {
-    axios("/movie/now_playing").then(function (response) {
+    axios("/movie/now_playing", options).then(function (response) {
+      setLastPage(response.data.total_pages);
       const newData = response.data.results.map((movie: any) => ({
         id: movie.id,
         title: movie.title,
@@ -30,12 +38,11 @@ export default function Home() {
         ratingStars: movie.vote_average,
         date: movie.release_date,
       }));
-
       setMovies(newData);
     }).catch(function (err) {
       console.error(err);
     });
-  }, []);
+  }, [page]);
 
   if (movies.length === 0) {
     return (
@@ -57,9 +64,12 @@ export default function Home() {
     <>
       <Navbar />
       <main className="mx-4 lg:mx-16">
-        <Dock />
+        <Dock playing={true} />
         <h2 className="text-white text-2xl font-poppinsBold text-center md:text-start md:mx-16 mb-8">Now Playing</h2>
         <Movies movies={movies} />
+        <div>
+          <Pagination/>
+        </div>
       </main>
       <Footer />
     </>

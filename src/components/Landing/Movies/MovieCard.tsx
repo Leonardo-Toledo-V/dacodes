@@ -31,7 +31,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ movie }) => {
                 <div className="absolute h-full w-full bg-[#5241eaa7] flex flex-col items-center pt-8 px-6 -top-0 group-hover:top-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-in-out text-white cursor-pointer">
                     <h3 className="font-poppinsBold text-xl text-center">{title}</h3>
                     <p className="text-sm my-2">{date}</p>
-                    <p className="text-sm line-clamp-5 w-48 mb-10 text-justify">{overview}</p>
+                    <p className="text-sm line-clamp-5 w-48 mb-10 ">{overview}</p>
                     <Stars stars={ratingStars} />
                 </div>
             </div>
