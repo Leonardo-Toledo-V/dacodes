@@ -32,3 +32,17 @@ Consiste en una aplicación la cuál demuestra todos los conocimientos adquirido
 > Los valores a ingresar, no importan mientras que se cumplan con los requisitos el botón de Crear Cuenta se habilitará
 
 
+- Una vez hayamos entrado podremos visualizar la página principal de películas que nos muestra 4 apartados
+
+  - Now Playing
+  - Popular
+  - Top Rating
+  - Upcoming
+
+
+- Estos apartados nos mostrará un listado de 20 películas con respecto a la categoría seleccionada, todo esto gracias a la API TMDB que actualiza la información de manera constante.
+
+
+
+
+### © Code by Leonardo Toledo
