@@ -102,7 +102,7 @@ export default function Form() {
                         disabled={disabled}
                         className={
                             `py-2 px-6 rounded-2xl font-poppinsBold duration-300 ${disabled
-                                ? 'cursor-not-allowed bg-gray-400 text-gray-200'
+                                ? 'cursor-not-allowed bg-[#2924aa] text-[#413da0]'
                                 : 'bg-gradient-to-r from-[#00ffd0] to-[#4e6ce4] cursor-pointer'
                             }`}
                         type="submit">Crear cuenta</button>
