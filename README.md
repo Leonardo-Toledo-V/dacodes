@@ -1,5 +1,5 @@
 # DaCodes - Movie
-Proyecto de Certificación React Fundamentals by RustyDev.
+Proyecto de Certificación React Fundamentals by Leonardo Toledo.
 
 
 ## Información del proyecto
