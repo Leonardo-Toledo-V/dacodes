@@ -16,7 +16,7 @@ Consiste en una aplicación la cuál demuestra todos los conocimientos adquirido
 
 ## Preview
 
-- Para poder visualizar la página, ingresaremos el siguiente link en el tu navegador.
+- Para poder visualizar la página, ingresaremos el siguiente link en el navegador.
 
 `https://dacodes-movies.vercel.app`
 
