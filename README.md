@@ -20,7 +20,7 @@ Consiste en una aplicación la cuál demuestra todos los conocimientos adquirido
 
 `https://dacodes-movies.vercel.app`
 
-- De primera visualizaremos un login, en el cuál tiene 3 inputs
+- De primera visualizaremos un login, el cuál tiene 3 inputs:
 
 | Input    | Requisitos                |
 | -------- | --------------------------|
