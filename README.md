@@ -1,34 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# DaCodes - Movie
+Proyecto de Certificación React Fundamentals by RustyDev.
 
-## Getting Started
 
-First, run the development server:
+## Información del proyecto
+Consiste en una aplicación la cuál demuestra todos los conocimientos adquiridos a lo largo del curso, esta aplicación es una réplica del figma proporcionado por DaCodes, el cuál hacemos uso de la API de TMDB para poder renderizar un listado de películas en tiempo real.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+- Link del Figma proporcionado por DaCodes:
+  
+`https://www.figma.com/file/YTiqOVNpUPkbaXS2u0bsYL/Curso-React-Js?type=design&node-id=0-1&mode=design&t=XS1uJtfgkczStweE-0`
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Link de la documentación de la API proporcionado por TMDB:
+  
+`https://developer.themoviedb.org/docs`
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Preview
 
-## Learn More
+- Para poder visualizar la página, ingresaremos el siguiente link en el tu navegador.
 
-To learn more about Next.js, take a look at the following resources:
+`https://dacodes-movies.vercel.app`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- De primera visualizaremos un login, en el cuál tiene 3 inputs
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+| Input    | Requisitos                |
+| -------- | --------------------------|
+| email    | (Ingresar un email válido)|
+| password | (Mayor a 8 caracteres)    |
+| terms    | (Darle a aceptar)         |
 
-## Deploy on Vercel
+> **Nota**
+> Los valores a ingresar, no importan mientras que se cumplan con los requisitos el botón de Crear Cuenta se habilitará
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
