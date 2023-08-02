@@ -54,7 +54,7 @@ export default function TopRatedPage() {
         <Navbar />
         <main className="mx-4 lg:mx-16">
           <Dock />
-          <h2 className="text-white text-2xl font-poppinsBold text-center md:text-start md:mx-16 mb-8">Now Playing</h2>
+          <h2 className="text-white text-2xl font-poppinsBold text-center md:text-start md:mx-16 mb-8">Top rated</h2>
           <div className="text-white text-5xl flex  justify-center h-screen w-full p-12">
             <AiOutlineLoading3Quarters className="animate-spin" />
           </div>
@@ -69,7 +69,7 @@ export default function TopRatedPage() {
       <Navbar />
       <main className="mx-4 lg:mx-16">
         <Dock rated={true} />
-        <h2 className="text-white text-2xl font-poppinsBold text-center md:text-start md:mx-16 mb-8">Now Playing</h2>
+        <h2 className="text-white text-2xl font-poppinsBold text-center md:text-start md:mx-16 mb-8">Top rated</h2>
         <Movies movies={movies} />
         <div>
           <Pagination />
